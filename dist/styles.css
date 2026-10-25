@@ -7,3 +7,44 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .resume-fallback{margin-top:14px;font-size:10px;color:var(--muted)}.resume-fallback a{text-decoration:underline;text-underline-offset:3px}.resume-fallback a:hover{color:var(--green)}.social-links{display:flex;flex-wrap:wrap;gap:22px;margin-top:24px;font-size:11px}.social-links a{display:inline-flex;align-items:center;gap:9px;border-bottom:1px solid var(--line);padding-bottom:5px}.social-links a:hover{color:#ab5729}.social-links span{font-size:14px}.hero-location{margin-top:24px}
+
+/* Theme control stays visible beside the menu on small screens. */
+:root{color-scheme:light}
+.header nav{margin-left:auto}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;min-width:78px;margin-left:24px;padding:9px 12px;border:1px solid var(--line);border-radius:4px;font-size:11px}
+.theme-toggle:hover{border-color:var(--ink)}
+.theme-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.theme-toggle .sun-icon{display:none}
+:root[data-theme=dark]{color-scheme:dark;--paper:#131e19;--ink:#eceee1;--green:#b9d4a7;--muted:#b0baac;--line:#354438}
+[data-theme=dark] .theme-toggle .moon-icon{display:none}
+[data-theme=dark] .theme-toggle .sun-icon{display:block}
+[data-theme=dark] h1 em{color:#b9d4a7}
+[data-theme=dark] .hero-intro,[data-theme=dark] .about-text p{color:#b0baac}
+[data-theme=dark] .about-text .large-copy{color:var(--ink)}
+[data-theme=dark] .note-top{color:#b0baac}
+[data-theme=dark] .brand-mark{background:#254d3b;color:#f6f4eb}
+[data-theme=dark] .playbook{background:#173e32;box-shadow:7px 10px 0 #354438}
+[data-theme=dark] .ticket{color:#173e32}
+[data-theme=dark] .primary,[data-theme=dark] .filter.active{background:#b9d4a7;color:#131e19;border-color:#b9d4a7}
+[data-theme=dark] .primary:hover{background:#cce4bd}
+[data-theme=dark] .skills-ribbon{background:#213127;border-color:var(--line)}
+[data-theme=dark] .skills-ribbon i{color:#b4c59c}
+[data-theme=dark] .work{background:#1a2820}
+[data-theme=dark] .project-card{border-color:var(--line)}
+[data-theme=dark] .project-info .eyebrow,[data-theme=dark] .contact-content .eyebrow{color:#b0baac}
+[data-theme=dark] .filter,[data-theme=dark] .tags>span{border-color:#4b5f4e}
+[data-theme=dark] .filter:hover{background:#2a4030}
+[data-theme=dark] .filter.active:hover{background:#cce4bd}
+[data-theme=dark] .pipeline-visual,[data-theme=dark] .city-visual,[data-theme=dark] .pet-visual{color:#203d32}
+[data-theme=dark] .impact span{background:#283e2d;color:#cfdfbf}
+[data-theme=dark] .timeline article{border-color:#53654b}
+[data-theme=dark] .about-stamp,[data-theme=dark] .education-icon{border-color:#748465}
+[data-theme=dark] .about-stamp{outline-color:#748465}
+[data-theme=dark] .toolkit{background:#173e32;color:#f6f4eb}
+[data-theme=dark] .contact-emblem{color:#203d32}
+[data-theme=dark] .skip{background:#b9d4a7;color:#131e19}
+[data-theme=dark] a:hover,[data-theme=dark] .case-link:hover{color:#f0b58c}
+[data-theme=dark] .primary:hover{color:#131e19}
+[data-theme=dark] :focus-visible{outline-color:#e99865}
+@media(max-width:1100px) and (min-width:781px){.header nav{gap:18px}.theme-toggle{margin-left:16px}}
+@media(max-width:780px){.header .brand{order:0}.theme-toggle{order:1;margin-left:auto;min-width:40px;padding:10px}.theme-label{display:none}.menu-toggle{order:2;margin-left:15px}.header nav{order:3;margin-left:0}}
