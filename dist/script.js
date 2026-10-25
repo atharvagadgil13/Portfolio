@@ -27,6 +27,13 @@ document.querySelectorAll('.filter').forEach(button => {
   });
 });
 const projectDetails = {
+  crime: {
+    type: 'DATA ENGINEERING / URBAN ANALYTICS', title: 'CrimeFlow LA',
+    description: 'An end-to-end team project that turns Los Angeles crime reports into a Databricks analytical lakehouse and Tableau dashboards. The project report documents a source snapshot of 1,004,991 records across 28 columns; this is a source profiling count, not a verified Gold-layer row count.',
+    approach: 'Profiled the source with Alteryx and ingested the CSV from a Unity Catalog volume into Bronze. The PySpark Silver layer drops null primary crime codes and reporting districts, parses dates, normalizes location text, handles missing values, and expands up to four crime codes per incident. Four AUTO CDC flows maintain crime-code, status, weapon, and location dimensions. A streaming append flow joins those dimensions into the Gold fact table, while standalone SQL creates the fifth, calendar dimension.',
+    result: 'Delivered a Gold fact table and five dimensions, plus a packaged Tableau workbook with two dashboards and nine worksheets covering temporal patterns, geographic hotspots, crime types, and weapon usage. The fact grain is incident–crime-code occurrence, so unique incident counts must use distinct incident identifiers. Dashboard counts describe reported records, not population-adjusted crime rates. The repository includes the notebook, data model, original report, setup guide, and documented data-quality limitations.',
+    tags: ['Databricks', 'PySpark', 'AUTO CDC', 'Alteryx', 'Dimensional modeling', 'Tableau'], repo: 'crimeflow-la'
+  },
   food: {
     type: 'DATA ENGINEERING / PUBLIC HEALTH', title: 'Food Inspection ETL',
     description: 'Chicago and Dallas publish food inspection data with very different structures: 17 columns in one source and 114 in the other. This project brings both into a consistent analytical model.',
