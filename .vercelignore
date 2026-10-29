@@ -2,3 +2,8 @@
 .openai
 dist/.openai
 dist/_headers
+
+# Original photos stay local; optimized web copies are in dist/assets.
+IMG_0192.JPG
+IMG_0335.jpeg
+IMG_1220.jpeg
